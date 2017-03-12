@@ -13,3 +13,6 @@ git相关资料
 
 # Github 团队协作流程图(forking工作流)
 ![](https://github.com/wangding/courses/blob/master/images/forkProcess.png)
+
+# Git 使用规范流程    
+[Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
