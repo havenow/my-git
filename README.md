@@ -17,4 +17,6 @@ git相关资料
 # Git 使用规范流程    
 [Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)   
 
+增加远程仓库，并命令 `git remote add [shortname] [url]`   
+
 ![Git使用规范流程](https://github.com/havenow/my-git/blob/master/images/Git%20Protocol.png)
