@@ -15,4 +15,6 @@ git相关资料
 ![](https://github.com/wangding/courses/blob/master/images/forkProcess.png)
 
 # Git 使用规范流程    
-[Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)
+[Git 使用规范流程](http://www.ruanyifeng.com/blog/2015/08/git-use-process.html)   
+
+![Git使用规范流程](https://github.com/havenow/my-git/blob/master/images/Git%20Protocol.png)
