@@ -1,4 +1,6 @@
-[阮一峰：Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)    
+[阮一峰：Commit message 和 Change log 编写指南](https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)  
+
+`git commit` 后会启动vi编辑器，写message时安装规范来写即可。
 
 # Commit message 的格式
 每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。   
