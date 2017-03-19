@@ -76,3 +76,5 @@ git branch -d hotfix-0.1.1
 git tag -a v0.1.1 master
 git push --tags
 ```
+
+![](https://github.com/havenow/my-git/blob/master/images/gitflow实操图.png)
