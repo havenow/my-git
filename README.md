@@ -24,6 +24,9 @@ git 模型可以抽象为：
 # Git工作流    
 [Git工作流指南](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)
 
+# Git Flow工作流   
+![](https://github.com/havenow/my-git/blob/master/images/my-workflow-cycle.png)
+
 # Github 团队协作流程图(forking工作流)
 ![](https://github.com/wangding/courses/blob/master/images/forkProcess.png)
 
