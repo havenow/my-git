@@ -1,7 +1,7 @@
 Gitflow工作流仍然用中央仓库作为所有开发者的交互中心。
 
 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)     
-[一个成功的 Git 分支模型 ](https://www.oschina.net/translate/a-successful-git-branching-model?lang=chs&page=1#)
+[A successful Git branching model译文：一个成功的 Git 分支模型 ](https://www.oschina.net/translate/a-successful-git-branching-model?lang=chs&page=1#)
 ![](https://github.com/havenow/my-git/blob/master/images/git-flow.png)   
 
 # 这张图左转90度，就容易理解了。
