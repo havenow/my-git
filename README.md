@@ -36,3 +36,19 @@ git 模型可以抽象为：
 增加远程仓库，并命令 `git remote add [shortname] [url]`   
 
 ![Git使用规范流程](https://github.com/havenow/my-git/blob/master/images/Git%20Protocol.png)
+
+# 根据官方项目创建自己的版本，同时更新官方代码到自己的版本（不做request）
+```
+1. Fork
+2. git clone https://github.com/your_id/mameui（此时clone到的是最新版本的官方代码）
+   如果需要切换到某个历史版本(需求：当初在某个历史版本修改的，现在回退到该版本，做合并后在pull官方的代码)
+   git reset --hard 历史版本的id
+   git push -f -u origin master
+3. git remote add upstream https://github.com/Robbbert/mameui
+4. 在本地修改代码，
+   git add .
+   git commit -m "commit message"
+   git push origin master(先push到自己的远程仓库，才能pull官方的远程仓库)
+5. git pull upstream master
+   此时需要修改代码的冲突，修改完冲突，在push到自己的远程仓库
+```
