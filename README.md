@@ -50,5 +50,5 @@ git 模型可以抽象为：
    git commit -m "commit message"
    git push origin master(先push到自己的远程仓库，才能pull官方的远程仓库)
 5. git pull upstream master
-   此时需要修改代码的冲突，修改完冲突，在push到自己的远程仓库
+   此时需要修改代码的冲突，修改完冲突，在push代码到自己的远程仓库
 ```
