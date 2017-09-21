@@ -1,5 +1,5 @@
 # my-git
-git相关资料
+git资料
 
 # 使用github    
 [极客学院：github使用手册](http://wiki.jikexueyuan.com/project/github-basics/)
