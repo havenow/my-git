@@ -22,7 +22,7 @@ git 模型可以抽象为：
 | remote | git push      |    - |   
 
 # Git工作流    
-[Git工作流指南](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)
+[参考文档：Git工作流指南](https://github.com/xirong/my-git/blob/master/git-workflow-tutorial.md)
 
 # Git Flow工作流   
 ![](https://github.com/havenow/my-git/blob/master/images/my-workflow-cycle.png)
