@@ -1,4 +1,4 @@
-# 使用github    
+# GitHub使用    
 [极客学院：github使用手册](http://wiki.jikexueyuan.com/project/github-basics/)
 
 # Git命令   
