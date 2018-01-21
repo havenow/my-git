@@ -8,3 +8,11 @@
 ![](https://github.com/havenow/my-git/blob/master/images/git-server.png)  
 
 		
+- # 环境搭建  
+软件下载地址：    
+WMare 	rj.baidu.com/soft/detail/13808.html    		
+
+Xshell  rj.baidu.com/soft/detail/15201.html    		
+
+CentOS	https://centos.org    		
+
