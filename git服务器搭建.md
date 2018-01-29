@@ -25,3 +25,5 @@ CentOS	https://centos.org
 - # 搭建SSH协议的Git服务器  　
 ![](https://github.com/havenow/my-git/blob/master/images/gitSSH%E5%8D%8F%E8%AE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
 
+- # 搭建HTTP协议的Git服务器  
+![](https://github.com/havenow/my-git/blob/master/images/gitWeb%E5%8D%8F%E8%AE%AE%E6%9C%8D%E5%8A%A1%E5%99%A8.png)  
