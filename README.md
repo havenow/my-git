@@ -49,3 +49,15 @@ git 模型可以抽象为：
 5. git pull upstream master
    此时需要修改代码的冲突，修改完冲突，在push代码到自己的远程仓库
 ```
+
+#  配置了密钥到Github上，提交代码还是要输入用户名和密码
+```
+因为用的是https而不是ssh，更新origin为ssh格式即可。
+https的格式为：https://github.com/用户名/仓库名.git
+ssh的格式为：git@github.com:用户名/仓库名.git
+
+解决方法：
+git remote remove origin
+git remote add origin git@github.com:用户名/仓库名.git
+```
+
