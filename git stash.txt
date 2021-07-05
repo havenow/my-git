@@ -1,0 +1,31 @@
+https://blog.csdn.net/sssssuuuuu666/article/details/108328547
+
+使用场景
+功能开发一半，改了个BUG需要提交，此时就需要把开发功能的改动代码暂存起来，
+将BUG修改内容进行提交并推送，推送后再恢复原有改动
+
+
+
+执行流程
+
+先git commit要提交的内容
+
+将剩下内容通过git stash存入暂存区
+
+git pull --rebase拉取远程最新代码
+
+将提交记录通过git push推到远程仓库
+
+git stash pop恢复之前暂存的改动
+
+
+git stash
+保存当前工作进度，会把暂存区和工作区的改动保存起来。执行完这个命令后，
+在运行git status命令，就会发现当前是一个干净的工作区，没有任何改动。
+
+git stash list
+显示保存进度的列表。也就意味着，git stash命令可以多次执行。
+
+git stash pop 
+恢复最新的进度到工作区。git默认会把工作区和暂存区的改动都恢复到工作区。
+通过git stash pop命令恢复进度后，会删除当前进度。
