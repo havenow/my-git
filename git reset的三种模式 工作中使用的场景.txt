@@ -18,3 +18,5 @@ git reset 倒数第二次提交的sha1	此时默认使用的是--mixed
 最后一次的提交和工作区的修改合并之后，都在工作区。
 没问题后，可以在commit
 
+krepo review 代码审查通过后
+krepo push 提交代码
