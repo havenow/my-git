@@ -1,0 +1,10 @@
+git reset --soft HEAD^ //拉取服务器最近一次提交到暂存区，该操作不影响工作区
+
+krepo review后，根据review之后的修改意见，修改本地代码
+git reset --soft HEAD^
+将工作区修改后的代码add到暂存区	git add -all
+git comit -m "msg"
+krepo review
+
+
+
