@@ -61,3 +61,9 @@ git remote remove origin
 git remote add origin git@github.com:用户名/仓库名.git
 ```
 
+# 打patch
+```
+git format-patch -1 commitSHA
+git am --keep-cr --reject xxxx.patch  
+git am --continue
+```
