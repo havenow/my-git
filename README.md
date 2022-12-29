@@ -67,3 +67,33 @@ git format-patch -1 commitSHA
 git am --keep-cr --reject xxxx.patch  
 git am --continue
 ```
+
+# 贮藏改动
+```
+贮藏改动
+git stash
+
+也会贮藏未跟踪的文件（不会包含已忽略的文件）
+git stash -u
+
+贮藏列表
+git stash list
+
+应用最近一次贮藏的改动
+git stash apply
+
+应用最近一次贮藏的改动，并将这条贮藏改动从栈上丢弃
+git stash pop
+
+应用 stash@{2} 的贮藏改动
+git stash apply stash@{2}
+
+丢弃最近一次贮藏的改动
+git stash drop
+
+丢弃 stash@{2} 的贮藏改动
+git stash drop stash@{2}
+
+丢弃所有的贮藏改动，即清空栈
+git stash clear
+```
