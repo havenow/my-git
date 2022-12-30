@@ -68,6 +68,56 @@ git am --keep-cr --reject xxxx.patch
 git am --continue
 ```
 
+# 历史记录
+```
+开发过程中建议使用可视化工具查看日志
+git log --pretty=format:"%ai , %an: %s" --since=“2022-08-26” >> ./20221025commit.log
+
+git log -S <string>
+-S参数接受一个字符串参数，用来显示那些添加或删除了该字符串的提交
+
+git log -- <path>
+在 git log 的最后指定文件名或者目录并用--隔开，则可以只看到文件或者目录的历史改动。
+如果这个文件被删除了，则可以用来查找这个文件是何时被删除的。
+
+git blame -L 100,106 xxx.cpp
+可以追踪代码里面的每一个改动
+使用-L参数还可以限制文件中的代码行，默认是所有行
+```
+
+```
+在代码提交到远程仓库之前，我们都可以在本地随便修改历史记录。
+一旦将代码推送到了远程仓库，那么除非特殊情况，都不建议直接修改远程仓库的历史记录。
+
+修改最后一次提交，或是仅修改最后一次提交的提交信息
+git commit --amend
+
+修改多个提交
+如果你的本地代码里面有多个提交，而你想要修改的提交记录并不是最近的那条提交。
+Git 其实并没有一个改变历史记录的工具，但是却可以利用变基命令来变基一系列提交。
+通过变基命令，可以在任何想要修改的提交后停止，然后修改信息、添加文件或做任何想做的事情。
+通过给git rebase增加-i选项来指定想要重写多久远的历史。
+
+git rebase -i HEAD~n
+git rebase -i HEAD~3 修改最后三次提交
+
+p, pick <commit> = use commit                                  直接使用提交
+r, reword <commit> = use commit, but edit the commit message   修改提交信息
+e, edit <commit> = use commit, but stop for amending           修改相应的提交
+s, squash <commit> = use commit, but meld into previous commit 合并提交
+d, drop <commit> = remove commit                               删除提交
+
+可以调整提交的顺序来达到重新排序提交的目的，删除提交行则可以删除相应的提交。
+将提交前面的pick改为edit，就可以修改相应的提交。
+变基命令重新应用提交时，遇到edit的提交就会停下来，等待你完成修改。
+      你可以调整你的改动，或只是调整提交信息，当完成修改后，运行git rebase --continue就可以继续变基命令。
+      （停下来后，修改代码，git add; git commit --ammend; git rebase --continue）
+使用squash参数合并提交。
+使用reword参数来修改某次改动的提交信息。
+使用edit参数并结合git reset命令来拆分一个很大的提交。
+注意：使用git rebase时需要stash本地工作区。
+```
+
 # 贮藏改动
 ```
 贮藏改动
