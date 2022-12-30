@@ -83,6 +83,10 @@ git log -- <path>
 git blame -L 100,106 xxx.cpp
 可以追踪代码里面的每一个改动
 使用-L参数还可以限制文件中的代码行，默认是所有行
+
+git log --stat          快速浏览某提交所带来的变化
+git log --patch -n      显示最近n次提交所引入的差异（按 补丁 的格式输出）
+git show commitID       查看commitID所引入的差异（按 补丁 的格式输出）
 ```
 
 ```
