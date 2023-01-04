@@ -150,4 +150,7 @@ git stash drop stash@{2}
 
 丢弃所有的贮藏改动，即清空栈
 git stash clear
+
+查看stash@{0}的记录
+git stash show stash@{0} -p
 ```
