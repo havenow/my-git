@@ -67,6 +67,23 @@ git <command> help   输出简短的参数选项
 git help <command>   输出详细说明
 ```
 
+# cherry pick
+```
+git cherry-pick -sx <commit_id>
+cherry-pick 可以合并其它分支已有的提交（本地提交或远程提交），它有以下参数：
+• -x 在提交信息的末尾追加一行（cherry picked from commit ...）
+      方便以后查到这个提交是如何产生的，如果你合并的是一个远程仓库的提交，那么建议加上这个参数。
+• -s 在提交信息的末尾追加一行操作者的签名，表示是谁进行了这个操作。
+• -e 合并之后提交之前，打开外部编辑器，编辑自动生成的提交信息。一般不需要使用这个参数去编辑提交信息。
+
+使用..合并多个连续的提交
+左开右闭区间，不会包含 commit_a
+git cherry-pick <commit_a>..<commit_b>
+
+左闭右闭区间，包含commit_a
+git cherry-pick <commit_a>^..<commit_b>
+```
+
 # 打patch
 ```
 git format-patch -1 commitSHA
