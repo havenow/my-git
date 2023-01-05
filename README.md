@@ -61,6 +61,12 @@ git remote remove origin
 git remote add origin git@github.com:用户名/仓库名.git
 ```
 
+# Git 帮助文档
+```
+git <command> help   输出简短的参数选项
+git help <command>   输出详细说明
+```
+
 # 打patch
 ```
 git format-patch -1 commitSHA
@@ -152,5 +158,17 @@ git stash drop stash@{2}
 git stash clear
 
 查看stash@{0}的记录
-git stash show stash@{0} -p
+git stash show stash@{0}      粗略的查看，列出有修改的文件
+git stash show stash@{0} -p   详细的查看，以patch的格式显示
+
+指定说明文字
+git stash push -m "stash message"
+
+交互式stash，每个修改逐个确认，之后不停按y/n来选择要stash的修改
+如果接下来没有需要stash的文件,则直接q退出就行
+git stash push -p -m "stash message"     目前发现会跳过修改过的png文件，估计二进制文件都会跳过
+git stash -p -m "stash message" 也可以
+
+指定文件列表stash，需要指定文件的路径，可以通过git status获取文件路径
+git stash push ***.cpp ***.h -m "stash message"
 ```
