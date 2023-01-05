@@ -190,3 +190,16 @@ git stash -p -m "stash message" 也可以
 先将需要暂存的文件放入staged区，然后git status，拷贝文件路径比较方便
 git stash push ***.cpp ***.h -m "stash message"
 ```
+
+# msic
+```
+git pull --rebase
+这样可以线性的看到每一次提交，并且没有增加提交节点
+
+git merge --no-ff branch 
+历史纪录会多出一个合并节点，为了保证版本演进的清晰，一般希望采用非快进合并
+
+git reset --soft HEAD^ 
+将最近一次commit的代码放回到暂存区，改操作不会影响到工作区
+commit代码后发现需求继续修改时，将代码从本地仓储退回到暂存区
+```
