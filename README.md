@@ -170,5 +170,6 @@ git stash push -p -m "stash message"     目前发现会跳过修改过的png文
 git stash -p -m "stash message" 也可以
 
 指定文件列表stash，需要指定文件的路径，可以通过git status获取文件路径
+先将需要暂存的文件放入staged区，然后git status，拷贝文件路径比较方便
 git stash push ***.cpp ***.h -m "stash message"
 ```
