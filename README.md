@@ -202,4 +202,8 @@ git merge --no-ff branch
 git reset --soft HEAD^ 
 将最近一次commit的代码放回到暂存区，改操作不会影响到工作区
 commit代码后发现需求继续修改时，将代码从本地仓储退回到暂存区
+
+git commit -t /Users/xxx/Documents/commit-template
+       -t <file>, --template=<file>
+提交时会根据指定文件中的内容编辑器，可以在编辑器中国呢修改提交记录，如果记录未做修改，提交将终止。
 ```
