@@ -110,6 +110,12 @@ git blame -L 100,106 xxx.cpp
 git log --stat          快速浏览某提交所带来的变化
 git log --patch -n      显示最近n次提交所引入的差异（按 补丁 的格式输出）
 git show commitID       查看commitID所引入的差异（按 补丁 的格式输出）
+
+git log一般第1行写简要说明，然后空行，再写详细说明.(开源项目都是这么做的，第1行作为主体，其它作为正文)
+这样就能使用pretty能输出简要或详细模式的日志，空行是个比较关键的地方。
+git log --pretty=oneline
+git log --pretty=short
+   oneline, short, medium, full, fuller, reference, email, raw
 ```
 
 ```
