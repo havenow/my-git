@@ -95,6 +95,7 @@ git am --continue
 ```
 开发过程中建议使用可视化工具查看日志
 git log --pretty=format:"%ai , %an: %s" --since=“2022-08-26” >> ./20221025commit.log
+git log --pretty=format:"%H, %ai , %an: %s" --since=“2022-08-26” >> ./20221025commit.log   %H添加commit id
 
 git log -S <string>
 -S参数接受一个字符串参数，用来显示那些添加或删除了该字符串的提交
