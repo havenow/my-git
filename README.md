@@ -213,4 +213,12 @@ commit代码后发现需求继续修改时，将代码从本地仓储退回到�
 git commit -t /Users/xxx/Documents/commit-template
        -t <file>, --template=<file>
 提交时会根据指定文件中的内容编辑器，可以在编辑器中国呢修改提交记录，如果记录未做修改，提交将终止。
+例子：commit-template文件内容如下
+#【项目：】本次提交的简要说明，说明本次提交干了什么，记得空一行，方便git log的pretty输出
+【项目：】
+
+# 本次提交的原因
+【原因：】
+# 本次提交的改动内容
+【改动：】
 ```
