@@ -221,6 +221,19 @@ git pull --rebase
 
 git merge --no-ff branch 
 历史纪录会多出一个合并节点，为了保证版本演进的清晰，一般希望采用非快进合并
+ With --ff, when possible resolve the merge as a fast-forward (only update the branch pointer to match the merged
+           branch; do not create a merge commit). When not possible (when the merged-in history is not a descendant of the
+           current history), create a merge commit.
+使用 -ff 选项时，只有在要合并的分支的提交历史是当前分支的直接后继时，才会进行快进合并，不会创建新的合并提交。而在其他情况下，无论是否使用 -ff 选项，都会创建一个新的合并提交。
+直接后继的场景在实际开发中基本不可能遇到，下面是直接后继的例子。
+      A--B--C   feature
+      /
+D--E--F         master
+git checkout master; git merge feature之后（默认是--ff）会变成：
+      A--B--C   feature
+      /         master
+D--E--F         
+
 
 git reset --soft HEAD^ 
 将最近一次commit的代码放回到暂存区，改操作不会影响到工作区
