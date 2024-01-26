@@ -82,6 +82,22 @@ git cherry-pick <commit_a>..<commit_b>
 
 左闭右闭区间，包含commit_a
 git cherry-pick <commit_a>^..<commit_b>
+
+
+git cherry-pick一个merge提交（可以理解为空提交）
+➜ git cherry-pick -x commitID-xxx
+error: commit commitID-xxx is a merge but no -m option was given.
+fatal: cherry-pick failed
+
+cherry-pick A相当于把A^到A的变化应用于当前分支，如果A是merge的commit，A有两个父节点，那么就无法确定A^。
+merge提交有两个parent，查看提交记录
+提交：
+commitID-xxx
+父级：
+commitID-xxx parent1, parent2
+
+git cherry-pick -m 确实会将指定的合并提交应用到当前分支，并将其视为一个普通的提交，而不会保留中间的提交记录。这是因为 git cherry-pick 是基于提交的差异进行的，而不是基于分支的历史记录。
+如果你需要保留中间的提交记录，并将整个分支的更改应用到当前分支，可以考虑使用其他的 Git 命令，如 git merge 或 git rebase。
 ```
 
 # 打patch
