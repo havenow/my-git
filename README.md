@@ -105,6 +105,15 @@ git cherry-pick -m 确实会将指定的合并提交应用到当前分支，并�
 git format-patch -1 commitSHA
 git am --keep-cr --reject xxxx.patch  
 git am --continue
+
+# 生成最近一次提交的 patch
+git format-patch HEAD~
+
+# 打入 patch 并生成提交
+git am --keep-cr xxx.patch
+
+# 仅打入 patch 而不会生成提交
+git apply xxx.patch
 ```
 
 # 历史记录
